@@ -1,0 +1,486 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Herramienta IA · ¿Cuántas ventas está dejando ir? · AI Lab</title>
+<meta name="description" content="Calculadora de embudo de ventas: compare sus conversiones con su sector en 30 segundos.">
+<meta name="theme-color" content="#000000">
+<link rel="icon" href="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2064%2064%22%3E%3Crect%20width%3D%2264%22%20height%3D%2264%22%20rx%3D%2214%22%20fill%3D%22%23000%22%2F%3E%3Ccircle%20cx%3D%2232%22%20cy%3D%2232%22%20r%3D%2214%22%20fill%3D%22%23FF005E%22%2F%3E%3C%2Fsvg%3E">
+<link rel="canonical" href="https://ailab.pra2media.com/herramienta-ia.html">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="AI Lab · PRA2MEDIA Group">
+<meta property="og:title" content="Herramienta IA · ¿Cuántas ventas está dejando ir? · AI Lab">
+<meta property="og:description" content="Calculadora de embudo de ventas: compare sus conversiones con su sector en 30 segundos.">
+<meta property="og:image" content="https://ailab.pra2media.com/img/og-ai-lab.jpg">
+<meta property="og:locale" content="es_EC">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@125,800&amp;family=Fragment+Mono&amp;family=Poppins:wght@300;400;500;600&amp;display=swap" rel="stylesheet">
+<style>
+body{margin:0;background:#000000}
+a{color:#FF005E}a:hover{color:#C8C3B4}
+a:focus-visible,input:focus-visible,button:focus-visible{outline:2px solid #FF005E;outline-offset:3px}
+input[type=number]::-webkit-inner-spin-button{opacity:0.3}
+@keyframes aiFadeUp{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:none}}
+@keyframes aiShimmer{0%{background-position:200% 0}100%{background-position:-200% 0}}
+@keyframes aiPulse{0%,100%{box-shadow:0 0 0 0 rgba(255,0,94,0.55),0 0 28px rgba(255,0,94,0.35)}50%{box-shadow:0 0 0 12px rgba(255,0,94,0),0 0 40px rgba(255,0,94,0.5)}}
+@keyframes aiBurst{0%{transform:translate(-50%,-50%) scale(0.3);opacity:0}12%{opacity:1}100%{transform:translate(calc(-50% + var(--dx)),calc(-50% + var(--dy))) scale(1);opacity:0}}
+@keyframes aiFloat{0%,100%{transform:translateY(0)}50%{transform:translateY(-6px)}}
+@keyframes aiGlowText{0%,100%{text-shadow:0 0 24px rgba(255,0,94,0.55)}50%{text-shadow:0 0 44px rgba(255,0,94,0.9)}}
+@media (prefers-reduced-motion: reduce){*{animation:none !important;transition:none !important}}
+</style>
+</head>
+<body>
+<div id="ailab-root"><div style="position: relative; overflow: hidden; background: #000000; color: #FFFFFF; font-family: 'Galano Grotesque', 'Poppins', Arial, Helvetica, sans-serif; font-weight: 400; font-size: 17px; padding: clamp(10px, 1.4vw, 20px)">
+  <div aria-hidden="true" style="position: absolute; left: 50%; top: 260px; width: 1100px; height: 700px; transform: translateX(-50%); background: radial-gradient(ellipse at center, rgba(255,0,94,0.16) 0%, rgba(141,11,57,0.08) 40%, rgba(0,0,0,0) 70%); pointer-events: none"></div>
+
+  
+  <header style="position: relative; max-width: 1240px; margin: 0 auto; display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 14px; padding: 10px clamp(8px, 1.6vw, 16px)">
+    <a href="index.html" aria-label="AI Lab, inicio" style="display: inline-flex; align-items: center; min-height: 48px; padding: 0 20px; border-radius: 999px; background: #12050A; border: 1px solid #3D0019; line-height: 0"><img src="img/logo-ai-lab.png" alt="PRA2MEDIA Group | AI Lab" style="width: 150px; height: auto; display: block"></a>
+    <nav aria-label="Principal" style="display: flex; flex-wrap: wrap; align-items: center; gap: 2px; padding: 4px; border-radius: 999px; background: #12050A; border: 1px solid #3D0019; font-family: 'Fragment Mono', Menlo, Consolas, monospace; font-size: 14px">
+      <a href="index.html" style="display: inline-flex; align-items: center; min-height: 44px; padding: 0 16px; color: #FFFFFF; text-decoration: none">Inicio</a>
+      <a href="index.html" style="display: inline-flex; align-items: center; min-height: 44px; padding: 0 16px; color: #FFFFFF; text-decoration: none">Análisis</a>
+      <a href="herramienta-ia.html" aria-current="page" style="display: inline-flex; align-items: center; gap: 8px; min-height: 44px; padding: 0 16px; border-radius: 999px; background: #3D0019; color: #FFFFFF; text-decoration: none"><span aria-hidden="true" style="width: 6px; height: 6px; border-radius: 50%; background: #FF005E; box-shadow: 0 0 8px #FF005E"></span>Herramienta IA</a>
+      <a href="index.html" style="display: inline-flex; align-items: center; min-height: 44px; padding: 0 16px; color: #FFFFFF; text-decoration: none">Planes</a>
+      <a href="index.html" style="display: inline-flex; align-items: center; min-height: 44px; padding: 0 20px; border-radius: 999px; background: #FF005E; color: #FFFFFF; text-decoration: none; font-family: 'Poppins', Arial, sans-serif; font-weight: 500; font-size: 15px">Suscribirse</a>
+    </nav>
+  </header>
+
+  
+  <section style="position: relative; max-width: 900px; margin: 0 auto; padding: clamp(44px, 5vw, 72px) clamp(8px, 1.6vw, 16px) 0; text-align: center">
+    <div style="display: inline-flex; align-items: center; gap: 10px; padding: 7px 14px; border-radius: 999px; background: #12050A; border: 1px solid #3D0019; font-family: 'Fragment Mono', Menlo, Consolas, monospace; font-size: 13px; color: #C8C3B4"><span aria-hidden="true" style="width: 7px; height: 7px; border-radius: 50%; background: #FF005E; box-shadow: 0 0 10px #FF005E"></span>Herramienta IA · 30 segundos</div>
+    <h1 style="margin: 18px 0 0; font-family: 'Fragment Mono', Menlo, Consolas, monospace; font-weight: 400; font-size: clamp(34px, 4.2vw, 56px); line-height: 1.08; letter-spacing: -0.03em">¿Cuántas ventas está dejando ir?</h1>
+    <p style="margin: 14px 0 0; font-size: 18px; line-height: 1.5; color: #C8C3B4">Compare su embudo con su sector y descúbralo.</p>
+  </section>
+
+  
+  <section aria-label="Calculadora de embudo" style="position: relative; width: 100%; box-sizing: border-box; margin: clamp(32px, 4vw, 48px) 0 0; padding: 0 clamp(8px, 1.6vw, 16px)">
+    <div style="padding: 1px; border-radius: 30px; background: linear-gradient(135deg, #FF005E 0%, #3D0019 30%, #1A000B 65%, #8C0034 100%); box-shadow: 0 40px 100px -40px rgba(255,0,94,0.45)">
+      <div style="position: relative; overflow: hidden; border-radius: 29px; padding: clamp(22px, 3.5vw, 44px); background: radial-gradient(ellipse 60% 40% at 100% 0%, rgba(255,0,94,0.12) 0%, rgba(0,0,0,0) 70%), repeating-linear-gradient(0deg, rgba(200,195,180,0.035) 0px, rgba(200,195,180,0.035) 1px, rgba(0,0,0,0) 1px, rgba(0,0,0,0) 32px), repeating-linear-gradient(90deg, rgba(200,195,180,0.035) 0px, rgba(200,195,180,0.035) 1px, rgba(0,0,0,0) 1px, rgba(0,0,0,0) 32px), #07020A">
+
+        
+        <ol aria-label="Pasos" style="list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 8px">
+          
+            <li>
+              <button type="button" data-ai-onclick="0" aria-current="step" style="width: 100%; padding: 0; border: 0; background: transparent; text-align: left; cursor: pointer; color: #FFFFFF">
+                <span style="display: block; height: 3px; border-radius: 2px; background: #FF005E; box-shadow: 0 0 12px rgba(255,0,94,0.8); transition: background 0.4s ease"></span>
+                <span style="display: block; margin-top: 10px; font-family: 'Fragment Mono', Menlo, Consolas, monospace; font-size: 13px">1 · Sector</span>
+              </button>
+            </li>
+          
+            <li>
+              <button type="button" data-ai-onclick="1" disabled="" aria-current="false" style="width: 100%; padding: 0; border: 0; background: transparent; text-align: left; cursor: pointer; color: #6E685D">
+                <span style="display: block; height: 3px; border-radius: 2px; background: rgba(200,195,180,0.15); box-shadow: none; transition: background 0.4s ease"></span>
+                <span style="display: block; margin-top: 10px; font-family: 'Fragment Mono', Menlo, Consolas, monospace; font-size: 13px">2 · Números</span>
+              </button>
+            </li>
+          
+            <li>
+              <button type="button" data-ai-onclick="2" disabled="" aria-current="false" style="width: 100%; padding: 0; border: 0; background: transparent; text-align: left; cursor: pointer; color: #6E685D">
+                <span style="display: block; height: 3px; border-radius: 2px; background: rgba(200,195,180,0.15); box-shadow: none; transition: background 0.4s ease"></span>
+                <span style="display: block; margin-top: 10px; font-family: 'Fragment Mono', Menlo, Consolas, monospace; font-size: 13px">3 · Resultado</span>
+              </button>
+            </li>
+          
+        </ol>
+
+        
+        
+          <div style="margin-top: clamp(28px, 3.5vw, 40px); animation: aiFadeUp 0.5s ease both" data-ai-branch="b5">
+            <h2 style="margin: 0; font-family: 'Fragment Mono', Menlo, Consolas, monospace; font-weight: 400; font-size: clamp(24px, 2.4vw, 30px); letter-spacing: -0.015em">¿En qué sector está?</h2>
+            <div role="group" aria-label="Sector" style="margin-top: 22px; display: grid; grid-template-columns: repeat(auto-fit, minmax(190px, 1fr)); gap: 10px">
+              
+                <button type="button" data-ai-onclick="3" aria-pressed="false" style="display: flex; flex-direction: column; align-items: flex-start; gap: 18px; min-height: 112px; padding: 16px; border-radius: 16px; border: 1px solid rgba(200,195,180,0.14); background: rgba(200,195,180,0.03); box-shadow: none; color: #FFFFFF; text-align: left; font-family: 'Poppins', Arial, sans-serif; font-size: 15px; line-height: 1.3; cursor: pointer; transition: transform 0.2s ease, background 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease; transform: none">
+                  <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#FF005E" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 7h11v9H3zM14 10h4l3 3v3h-7zM7 19a2 2 0 1 0 0-4 2 2 0 0 0 0 4zM17 19a2 2 0 1 0 0-4 2 2 0 0 0 0 4z"></path></svg>
+                  <span>Distribución y logística</span>
+                </button>
+              
+                <button type="button" data-ai-onclick="4" aria-pressed="false" style="display: flex; flex-direction: column; align-items: flex-start; gap: 18px; min-height: 112px; padding: 16px; border-radius: 16px; border: 1px solid rgba(200,195,180,0.14); background: rgba(200,195,180,0.03); box-shadow: none; color: #FFFFFF; text-align: left; font-family: 'Poppins', Arial, sans-serif; font-size: 15px; line-height: 1.3; cursor: pointer; transition: transform 0.2s ease, background 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease; transform: none">
+                  <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#FF005E" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 8h14l-1 12H6zM9 8V6a3 3 0 0 1 6 0v2"></path></svg>
+                  <span>Retail y comercio</span>
+                </button>
+              
+                <button type="button" data-ai-onclick="5" aria-pressed="false" style="display: flex; flex-direction: column; align-items: flex-start; gap: 18px; min-height: 112px; padding: 16px; border-radius: 16px; border: 1px solid rgba(200,195,180,0.14); background: rgba(200,195,180,0.03); box-shadow: none; color: #FFFFFF; text-align: left; font-family: 'Poppins', Arial, sans-serif; font-size: 15px; line-height: 1.3; cursor: pointer; transition: transform 0.2s ease, background 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease; transform: none">
+                  <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#FF005E" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 20V10l6 4v-4l6 4V6h6v14z"></path></svg>
+                  <span>Manufactura e industria</span>
+                </button>
+              
+                <button type="button" data-ai-onclick="6" aria-pressed="false" style="display: flex; flex-direction: column; align-items: flex-start; gap: 18px; min-height: 112px; padding: 16px; border-radius: 16px; border: 1px solid rgba(200,195,180,0.14); background: rgba(200,195,180,0.03); box-shadow: none; color: #FFFFFF; text-align: left; font-family: 'Poppins', Arial, sans-serif; font-size: 15px; line-height: 1.3; cursor: pointer; transition: transform 0.2s ease, background 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease; transform: none">
+                  <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#FF005E" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 8h18v11H3zM9 8V5h6v3M3 13h18"></path></svg>
+                  <span>Servicios profesionales</span>
+                </button>
+              
+                <button type="button" data-ai-onclick="7" aria-pressed="false" style="display: flex; flex-direction: column; align-items: flex-start; gap: 18px; min-height: 112px; padding: 16px; border-radius: 16px; border: 1px solid rgba(200,195,180,0.14); background: rgba(200,195,180,0.03); box-shadow: none; color: #FFFFFF; text-align: left; font-family: 'Poppins', Arial, sans-serif; font-size: 15px; line-height: 1.3; cursor: pointer; transition: transform 0.2s ease, background 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease; transform: none">
+                  <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#FF005E" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 7h10v10H7zM10 2v3M14 2v3M10 19v3M14 19v3M2 10h3M2 14h3M19 10h3M19 14h3"></path></svg>
+                  <span>Tecnología y software</span>
+                </button>
+              
+                <button type="button" data-ai-onclick="8" aria-pressed="false" style="display: flex; flex-direction: column; align-items: flex-start; gap: 18px; min-height: 112px; padding: 16px; border-radius: 16px; border: 1px solid rgba(200,195,180,0.14); background: rgba(200,195,180,0.03); box-shadow: none; color: #FFFFFF; text-align: left; font-family: 'Poppins', Arial, sans-serif; font-size: 15px; line-height: 1.3; cursor: pointer; transition: transform 0.2s ease, background 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease; transform: none">
+                  <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#FF005E" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 11l9-7 9 7v9H3zM9 20v-6h6v6"></path></svg>
+                  <span>Inmobiliaria</span>
+                </button>
+              
+                <button type="button" data-ai-onclick="9" aria-pressed="false" style="display: flex; flex-direction: column; align-items: flex-start; gap: 18px; min-height: 112px; padding: 16px; border-radius: 16px; border: 1px solid rgba(200,195,180,0.14); background: rgba(200,195,180,0.03); box-shadow: none; color: #FFFFFF; text-align: left; font-family: 'Poppins', Arial, sans-serif; font-size: 15px; line-height: 1.3; cursor: pointer; transition: transform 0.2s ease, background 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease; transform: none">
+                  <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#FF005E" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s-8-5-8-11a5 5 0 0 1 8-3 5 5 0 0 1 8 3c0 6-8 11-8 11zM12 9v5M9.5 11.5h5"></path></svg>
+                  <span>Salud</span>
+                </button>
+              
+                <button type="button" data-ai-onclick="10" aria-pressed="false" style="display: flex; flex-direction: column; align-items: flex-start; gap: 18px; min-height: 112px; padding: 16px; border-radius: 16px; border: 1px solid rgba(200,195,180,0.14); background: rgba(200,195,180,0.03); box-shadow: none; color: #FFFFFF; text-align: left; font-family: 'Poppins', Arial, sans-serif; font-size: 15px; line-height: 1.3; cursor: pointer; transition: transform 0.2s ease, background 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease; transform: none">
+                  <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#FF005E" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 9l10-5 10 5-10 5zM6 11v5c3 2 9 2 12 0v-5"></path></svg>
+                  <span>Educación</span>
+                </button>
+              
+            </div>
+          </div>
+        
+
+        
+        
+
+        
+        
+
+      </div>
+    </div>
+  </section>
+
+  <footer style="position: relative; max-width: 1240px; margin: clamp(56px, 6vw, 88px) auto 0; padding: 22px clamp(8px, 1.6vw, 16px) 28px; border-top: 1px solid #3D0019; display: flex; flex-wrap: wrap; justify-content: space-between; gap: 12px; font-family: 'Fragment Mono', Menlo, Consolas, monospace; font-size: 13px; color: #C8C3B4">
+    <span>© 2026 PRA2MEDIA Group · AI Lab · <span style="color: #FF005E">WE TEST IT. WE PROVE IT.</span></span>
+    <span>Quito, Ecuador · <a href="https://pra2media.com" style="color: #C8C3B4">pra2media.com</a></span>
+  </footer>
+</div></div>
+<template id="ailab-tpl"><div style="position: relative; overflow: hidden; background: #000000; color: #FFFFFF; font-family: 'Galano Grotesque', 'Poppins', Arial, Helvetica, sans-serif; font-weight: 400; font-size: 17px; padding: clamp(10px, 1.4vw, 20px)">
+  <div aria-hidden="true" style="position: absolute; left: 50%; top: 260px; width: 1100px; height: 700px; transform: translateX(-50%); background: radial-gradient(ellipse at center, rgba(255,0,94,0.16) 0%, rgba(141,11,57,0.08) 40%, rgba(0,0,0,0) 70%); pointer-events: none"></div>
+
+  <!-- Barra superior -->
+  <header style="position: relative; max-width: 1240px; margin: 0 auto; display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 14px; padding: 10px clamp(8px, 1.6vw, 16px)">
+    <a href="index.html" aria-label="AI Lab, inicio" style="display: inline-flex; align-items: center; min-height: 48px; padding: 0 20px; border-radius: 999px; background: #12050A; border: 1px solid #3D0019; line-height: 0"><img src="img/logo-ai-lab.png" alt="PRA2MEDIA Group | AI Lab" style="width: 150px; height: auto; display: block"></a>
+    <nav aria-label="Principal" style="display: flex; flex-wrap: wrap; align-items: center; gap: 2px; padding: 4px; border-radius: 999px; background: #12050A; border: 1px solid #3D0019; font-family: 'Fragment Mono', Menlo, Consolas, monospace; font-size: 14px">
+      <a href="index.html" style="display: inline-flex; align-items: center; min-height: 44px; padding: 0 16px; color: #FFFFFF; text-decoration: none">Inicio</a>
+      <a href="index.html" style="display: inline-flex; align-items: center; min-height: 44px; padding: 0 16px; color: #FFFFFF; text-decoration: none">Análisis</a>
+      <a href="herramienta-ia.html" aria-current="page" style="display: inline-flex; align-items: center; gap: 8px; min-height: 44px; padding: 0 16px; border-radius: 999px; background: #3D0019; color: #FFFFFF; text-decoration: none"><span aria-hidden="true" style="width: 6px; height: 6px; border-radius: 50%; background: #FF005E; box-shadow: 0 0 8px #FF005E"></span>Herramienta IA</a>
+      <a href="index.html" style="display: inline-flex; align-items: center; min-height: 44px; padding: 0 16px; color: #FFFFFF; text-decoration: none">Planes</a>
+      <a href="index.html" style="display: inline-flex; align-items: center; min-height: 44px; padding: 0 20px; border-radius: 999px; background: #FF005E; color: #FFFFFF; text-decoration: none; font-family: 'Poppins', Arial, sans-serif; font-weight: 500; font-size: 15px">Suscribirse</a>
+    </nav>
+  </header>
+
+  <!-- Encabezado corto -->
+  <section style="position: relative; max-width: 900px; margin: 0 auto; padding: clamp(44px, 5vw, 72px) clamp(8px, 1.6vw, 16px) 0; text-align: center">
+    <div style="display: inline-flex; align-items: center; gap: 10px; padding: 7px 14px; border-radius: 999px; background: #12050A; border: 1px solid #3D0019; font-family: 'Fragment Mono', Menlo, Consolas, monospace; font-size: 13px; color: #C8C3B4"><span aria-hidden="true" style="width: 7px; height: 7px; border-radius: 50%; background: #FF005E; box-shadow: 0 0 10px #FF005E"></span>Herramienta IA · 30 segundos</div>
+    <h1 style="margin: 18px 0 0; font-family: 'Fragment Mono', Menlo, Consolas, monospace; font-weight: 400; font-size: clamp(34px, 4.2vw, 56px); line-height: 1.08; letter-spacing: -0.03em">¿Cuántas ventas está dejando ir?</h1>
+    <p style="margin: 14px 0 0; font-size: 18px; line-height: 1.5; color: #C8C3B4">Compare su embudo con su sector y descúbralo.</p>
+  </section>
+
+  <!-- Módulo -->
+  <section aria-label="Calculadora de embudo" style="position: relative; width: 100%; box-sizing: border-box; margin: clamp(32px, 4vw, 48px) 0 0; padding: 0 clamp(8px, 1.6vw, 16px)">
+    <div style="padding: 1px; border-radius: 30px; background: linear-gradient(135deg, #FF005E 0%, #3D0019 30%, #1A000B 65%, #8C0034 100%); box-shadow: 0 40px 100px -40px rgba(255,0,94,0.45)">
+      <div style="position: relative; overflow: hidden; border-radius: 29px; padding: clamp(22px, 3.5vw, 44px); background: radial-gradient(ellipse 60% 40% at 100% 0%, rgba(255,0,94,0.12) 0%, rgba(0,0,0,0) 70%), repeating-linear-gradient(0deg, rgba(200,195,180,0.035) 0px, rgba(200,195,180,0.035) 1px, rgba(0,0,0,0) 1px, rgba(0,0,0,0) 32px), repeating-linear-gradient(90deg, rgba(200,195,180,0.035) 0px, rgba(200,195,180,0.035) 1px, rgba(0,0,0,0) 1px, rgba(0,0,0,0) 32px), #07020A">
+
+        <!-- Pasos -->
+        <ol aria-label="Pasos" style="list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 8px">
+          <sc-for list="{{steps}}" as="sp" hint-placeholder-count="3">
+            <li>
+              <button type="button" onclick="{{sp.go}}" disabled="{{sp.locked}}" aria-current="{{sp.current}}" style="width: 100%; padding: 0; border: 0; background: transparent; text-align: left; cursor: pointer; color: {{sp.text}}">
+                <span style="display: block; height: 3px; border-radius: 2px; background: {{sp.bar}}; box-shadow: {{sp.glow}}; transition: background 0.4s ease"></span>
+                <span style="display: block; margin-top: 10px; font-family: 'Fragment Mono', Menlo, Consolas, monospace; font-size: 13px">{{sp.label}}</span>
+              </button>
+            </li>
+          </sc-for>
+        </ol>
+
+        <!-- PASO 1: sector -->
+        <sc-if value="{{isStep1}}" hint-placeholder-val="{{ true }}">
+          <div style="margin-top: clamp(28px, 3.5vw, 40px); animation: aiFadeUp 0.5s ease both">
+            <h2 style="margin: 0; font-family: 'Fragment Mono', Menlo, Consolas, monospace; font-weight: 400; font-size: clamp(24px, 2.4vw, 30px); letter-spacing: -0.015em">¿En qué sector está?</h2>
+            <div role="group" aria-label="Sector" style="margin-top: 22px; display: grid; grid-template-columns: repeat(auto-fit, minmax(190px, 1fr)); gap: 10px">
+              <sc-for list="{{sectors}}" as="sec" hint-placeholder-count="8">
+                <button type="button" onclick="{{sec.pick}}" aria-pressed="{{sec.pressed}}" style="display: flex; flex-direction: column; align-items: flex-start; gap: 18px; min-height: 112px; padding: 16px; border-radius: 16px; border: 1px solid {{sec.border}}; background: {{sec.bg}}; box-shadow: {{sec.glow}}; color: #FFFFFF; text-align: left; font-family: 'Poppins', Arial, sans-serif; font-size: 15px; line-height: 1.3; cursor: pointer; transition: transform 0.2s ease, background 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease; transform: {{sec.lift}}">
+                  <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#FF005E" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="{{sec.icon}}"></path></svg>
+                  <span>{{sec.name}}</span>
+                </button>
+              </sc-for>
+            </div>
+          </div>
+        </sc-if>
+
+        <!-- PASO 2: números -->
+        <sc-if value="{{isStep2}}" hint-placeholder-val="{{ false }}">
+          <div style="margin-top: clamp(28px, 3.5vw, 40px); animation: aiFadeUp 0.5s ease both">
+            <h2 style="margin: 0; font-family: 'Fragment Mono', Menlo, Consolas, monospace; font-weight: 400; font-size: clamp(24px, 2.4vw, 30px); letter-spacing: -0.015em">Sus números del último mes</h2>
+            <div style="margin-top: 24px; display: flex; flex-wrap: wrap; gap: 28px 40px; align-items: center">
+              <div style="flex: 1.2 1 360px; min-width: 0; display: flex; flex-direction: column; gap: 18px">
+                <sc-for list="{{fields}}" as="fld" hint-placeholder-count="4">
+                  <div>
+                    <div style="display: flex; justify-content: space-between; align-items: center; gap: 12px">
+                      <label for="{{fld.id}}" style="font-size: 16px">{{fld.label}}</label>
+                      <input id="{{fld.id}}" type="number" inputmode="numeric" min="0" value="{{fld.value}}" oninput="{{fld.change}}" aria-describedby="{{fld.id}}-r" style="box-sizing: border-box; width: 110px; min-height: 44px; padding: 0 14px; border-radius: 12px; border: 1px solid #3D0019; background: #000000; color: #FFFFFF; font-family: 'Fragment Mono', Menlo, Consolas, monospace; font-size: 20px; text-align: right">
+                    </div>
+                    <input id="{{fld.id}}-r" type="range" min="0" max="{{fld.max}}" step="{{fld.step}}" value="{{fld.value}}" oninput="{{fld.change}}" aria-label="{{fld.label}}" style="width: 100%; margin: 10px 0 0; accent-color: #FF005E; cursor: pointer">
+                  </div>
+                </sc-for>
+              </div>
+              <div aria-hidden="true" style="flex: 1 1 280px; min-width: 0; display: flex; flex-direction: column; align-items: center; gap: 8px">
+                <sc-for list="{{funnel}}" as="fb" hint-placeholder-count="4">
+                  <div style="width: 100%; display: flex; flex-direction: column; align-items: center">
+                    <div style="height: 44px; width: {{fb.w}}%; min-width: 60px; border-radius: 12px; display: flex; align-items: center; justify-content: center; background: linear-gradient(90deg, {{fb.c1}} 0%, {{fb.c2}} 50%, {{fb.c1}} 100%); background-size: 200% 100%; animation: aiShimmer 3.5s linear infinite; box-shadow: 0 0 22px rgba(255,0,94,0.25); transition: width 0.45s cubic-bezier(0.2, 0.8, 0.2, 1); font-family: 'Fragment Mono', Menlo, Consolas, monospace; font-size: 15px; color: #FFFFFF">{{fb.n}}</div>
+                    <span style="margin-top: 4px; font-family: 'Fragment Mono', Menlo, Consolas, monospace; font-size: 12px; color: #C8C3B4">{{fb.label}}</span>
+                  </div>
+                </sc-for>
+              </div>
+            </div>
+            <sc-if value="{{invalid}}" hint-placeholder-val="{{ false }}">
+              <p role="alert" style="margin: 20px 0 0; padding: 14px 18px; border-radius: 12px; background: #1F0710; border: 1px solid #8C0034; font-size: 15px">{{invalidMsg}}</p>
+            </sc-if>
+            <div style="margin-top: 28px; display: flex; justify-content: center">
+              <button type="button" onclick="{{reveal}}" disabled="{{invalid}}" style="display: inline-flex; align-items: center; gap: 12px; min-height: 58px; padding: 0 30px 0 10px; border: 0; border-radius: 999px; background: {{revealBg}}; color: #FFFFFF; font-family: 'Poppins', Arial, sans-serif; font-weight: 600; font-size: 17px; cursor: pointer; animation: {{revealAnim}}">
+                <span aria-hidden="true" style="width: 40px; height: 40px; border-radius: 50%; background: #FFFFFF; display: inline-flex; align-items: center; justify-content: center"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#FF005E" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"></path><path d="M13 6l6 6-6 6"></path></svg></span>
+                Ver mi resultado
+              </button>
+            </div>
+          </div>
+        </sc-if>
+
+        <!-- PASO 3: resultado, todo en un solo rectángulo -->
+        <sc-if value="{{isStep3}}" hint-placeholder-val="{{ false }}">
+          <div style="margin-top: clamp(22px, 2.6vw, 32px); display: flex; flex-wrap: wrap; gap: 20px; align-items: stretch">
+
+            <!-- Columna 1: resultado y acciones -->
+            <div style="position: relative; flex: 1 1 360px; min-width: 0; display: flex; flex-direction: column; justify-content: center; padding: clamp(20px, 2.4vw, 28px); border-radius: 20px; background: linear-gradient(160deg, rgba(255,0,94,0.14) 0%, rgba(7,2,10,0) 60%); border: 1px solid #3D0019; animation: aiFadeUp 0.55s ease both">
+              <div aria-hidden="true" style="position: absolute; left: 30%; top: 90px; width: 0; height: 0; pointer-events: none">
+                <sc-for list="{{particles}}" as="pt" hint-placeholder-count="0">
+                  <span style="position: absolute; left: 0; top: 0; width: {{pt.s}}px; height: {{pt.s}}px; border-radius: {{pt.r}}; background: {{pt.c}}; box-shadow: 0 0 10px {{pt.c}}; transform: translate({{pt.x}}px, {{pt.y}}px) rotate({{pt.rot}}deg); opacity: {{pt.o}}"></span>
+                </sc-for>
+              </div>
+              <div style="font-family: 'Fragment Mono', Menlo, Consolas, monospace; font-size: 14px; color: #C8C3B4">{{heroLabel}}</div>
+              <div style="margin-top: 6px; font-family: 'Fragment Mono', Menlo, Consolas, monospace; font-size: clamp(64px, 7vw, 104px); line-height: 1; letter-spacing: -0.05em; color: #FF005E; animation: aiGlowText 2.4s ease-in-out infinite">{{heroValue}}</div>
+              <div style="margin-top: 10px; font-size: 18px; line-height: 1.4">{{heroSub}}</div>
+              <sc-if value="{{hasOpp}}" hint-placeholder-val="{{ true }}">
+                <div style="margin-top: 16px; display: flex; align-items: flex-start; gap: 12px; font-size: 15px; line-height: 1.5; color: #C8C3B4">
+                  <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#FF005E" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex: none; margin-top: 1px; animation: aiFloat 2.6s ease-in-out infinite"><path d="M12 3l2.6 5.6L20 9.4l-4 4 1 5.6-5-2.8-5 2.8 1-5.6-4-4 5.4-.8z"></path></svg>
+                  <span>La IA puede ayudarle a {{oppTip}}</span>
+                </div>
+              </sc-if>
+              <div style="margin-top: 22px; display: flex; flex-wrap: wrap; align-items: center; gap: 10px 18px">
+                <a href="https://wa.me/593962823962?text=Quiero%20una%20reuni%C3%B3n%20de%2020%20min%20con%20el%20equipo%20de%20AI%20Lab" target="_blank" rel="noopener" style="display: inline-flex; align-items: center; min-height: 52px; padding: 0 26px; border-radius: 999px; background: #FF005E; color: #FFFFFF; text-decoration: none; font-family: 'Poppins', Arial, sans-serif; font-weight: 600; font-size: 15px; animation: aiPulse 2.4s ease-in-out infinite">Agendar 20 minutos para mejorarlo</a>
+                <button type="button" onclick="{{again}}" style="min-height: 44px; padding: 0 4px; border: 0; background: transparent; color: #C8C3B4; font-family: 'Fragment Mono', Menlo, Consolas, monospace; font-size: 13px; cursor: pointer">↺ Probar otros números</button>
+              </div>
+            </div>
+
+            <!-- Columna 2: conversión total -->
+            <div style="flex: 0 1 260px; min-width: 220px; display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 20px; border-radius: 20px; background: rgba(200,195,180,0.035); border: 1px solid #3D0019; animation: aiFadeUp 0.55s ease 0.12s both">
+              <div style="font-family: 'Fragment Mono', Menlo, Consolas, monospace; font-size: 13px; color: #C8C3B4">Conversión total</div>
+              <div style="position: relative; margin-top: 12px; width: 180px; height: 180px">
+                <svg width="180" height="180" viewBox="0 0 180 180" role="img" aria-label="Conversión total: su empresa {{totalYouTxt}}, referencia {{totalRefTxt}}">
+                  <circle cx="90" cy="90" r="78" fill="none" stroke="#1F0710" stroke-width="10"></circle>
+                  <circle cx="90" cy="90" r="78" fill="none" stroke="#FF005E" stroke-width="10" stroke-linecap="round" stroke-dasharray="490.09" stroke-dashoffset="{{ringYou}}" transform="rotate(-90 90 90)" style="filter: drop-shadow(0 0 8px rgba(255,0,94,0.8))"></circle>
+                  <circle cx="90" cy="90" r="60" fill="none" stroke="#1F0710" stroke-width="6"></circle>
+                  <circle cx="90" cy="90" r="60" fill="none" stroke="#C8C3B4" stroke-width="6" stroke-linecap="round" stroke-dasharray="376.99" stroke-dashoffset="{{ringRef}}" transform="rotate(-90 90 90)"></circle>
+                </svg>
+                <div aria-hidden="true" style="position: absolute; inset: 0; display: flex; flex-direction: column; align-items: center; justify-content: center">
+                  <span style="font-family: 'Fragment Mono', Menlo, Consolas, monospace; font-size: 30px; letter-spacing: -0.03em">{{totalYouShown}}</span>
+                  <span style="margin-top: 2px; font-family: 'Fragment Mono', Menlo, Consolas, monospace; font-size: 12px; color: #C8C3B4">lead → venta</span>
+                </div>
+              </div>
+              <div style="margin-top: 14px; display: flex; gap: 14px; font-family: 'Fragment Mono', Menlo, Consolas, monospace; font-size: 12px">
+                <span style="display: inline-flex; align-items: center; gap: 6px"><span aria-hidden="true" style="width: 10px; height: 3px; border-radius: 2px; background: #FF005E"></span>Usted</span>
+                <span style="display: inline-flex; align-items: center; gap: 6px; color: #C8C3B4"><span aria-hidden="true" style="width: 10px; height: 3px; border-radius: 2px; background: #C8C3B4"></span>Sector {{totalRefTxt}}</span>
+              </div>
+            </div>
+
+            <!-- Columna 3: etapas -->
+            <div style="flex: 1.3 1 420px; min-width: 0; display: flex; flex-direction: column; gap: 8px">
+              <sc-for list="{{stages}}" as="stg" hint-placeholder-count="3">
+                <div style="flex: 1 1 auto; display: flex; flex-direction: column; justify-content: center; padding: 12px 16px; border-radius: 16px; background: {{stg.bg}}; border: 1px solid {{stg.border}}; animation: aiFadeUp 0.55s ease {{stg.delay}}s both">
+                  <div style="display: flex; justify-content: space-between; align-items: center; gap: 12px">
+                    <span style="font-size: 15px">{{stg.name}}</span>
+                    <span style="padding: 3px 10px; border-radius: 999px; background: {{stg.chipBg}}; font-family: 'Fragment Mono', Menlo, Consolas, monospace; font-size: 12px; color: {{stg.chipText}}">{{stg.status}}</span>
+                  </div>
+                  <div style="margin-top: 10px; display: grid; grid-template-columns: minmax(0, 1fr) 64px; gap: 6px 12px; align-items: center; font-family: 'Fragment Mono', Menlo, Consolas, monospace; font-size: 13px">
+                    <div style="height: 9px; border-radius: 5px; background: #1F0710"><div style="height: 9px; border-radius: 5px; width: {{stg.youW}}%; background: linear-gradient(90deg, #8C0034 0%, #FF005E 100%); box-shadow: 0 0 14px rgba(255,0,94,0.55)"></div></div>
+                    <span style="text-align: right">{{stg.youShown}}</span>
+                    <div style="height: 5px; border-radius: 3px; background: #1F0710"><div style="height: 5px; border-radius: 3px; width: {{stg.refW}}%; background: #C8C3B4"></div></div>
+                    <span style="text-align: right; color: #C8C3B4">{{stg.ref}}</span>
+                  </div>
+                </div>
+              </sc-for>
+            </div>
+
+            <p style="flex: 1 1 100%; margin: 0; font-family: 'Fragment Mono', Menlo, Consolas, monospace; font-size: 12px; line-height: 1.6; color: #8F897C">Barra magenta: su empresa · Barra gris: referencia del sector. Referencias de ejemplo, pendientes de validar con un estudio de mercado. Fuente: REEMPLAZAR.</p>
+          </div>
+        </sc-if>
+
+      </div>
+    </div>
+  </section>
+
+  <footer style="position: relative; max-width: 1240px; margin: clamp(56px, 6vw, 88px) auto 0; padding: 22px clamp(8px, 1.6vw, 16px) 28px; border-top: 1px solid #3D0019; display: flex; flex-wrap: wrap; justify-content: space-between; gap: 12px; font-family: 'Fragment Mono', Menlo, Consolas, monospace; font-size: 13px; color: #C8C3B4">
+    <span>© 2026 PRA2MEDIA Group · AI Lab · <span style="color: #FF005E">WE TEST IT. WE PROVE IT.</span></span>
+    <span>Quito, Ecuador · <a href="https://pra2media.com" style="color: #C8C3B4">pra2media.com</a></span>
+  </footer>
+</div></template>
+<script id="ailab-logic" type="text/plain">
+class Component extends DCLogic {
+  componentWillUnmount() {
+    if (this._anim) cancelAnimationFrame(this._anim);
+    if (this._adv) clearTimeout(this._adv);
+  }
+  sectorList() {
+    // Referencias de EJEMPLO por etapa (lead→interesado, interesado→visita, visita→venta, en %).
+    // REEMPLAZAR con datos de un estudio de mercado verificado antes de publicar.
+    return [
+      { id: 'distribucion', name: 'Distribución y logística', ref: [30, 35, 25], icon: 'M3 7h11v9H3zM14 10h4l3 3v3h-7zM7 19a2 2 0 1 0 0-4 2 2 0 0 0 0 4zM17 19a2 2 0 1 0 0-4 2 2 0 0 0 0 4z' },
+      { id: 'retail', name: 'Retail y comercio', ref: [20, 40, 30], icon: 'M5 8h14l-1 12H6zM9 8V6a3 3 0 0 1 6 0v2' },
+      { id: 'manufactura', name: 'Manufactura e industria', ref: [25, 30, 20], icon: 'M3 20V10l6 4v-4l6 4V6h6v14z' },
+      { id: 'servicios', name: 'Servicios profesionales', ref: [30, 40, 35], icon: 'M3 8h18v11H3zM9 8V5h6v3M3 13h18' },
+      { id: 'tecnologia', name: 'Tecnología y software', ref: [20, 30, 20], icon: 'M7 7h10v10H7zM10 2v3M14 2v3M10 19v3M14 19v3M2 10h3M2 14h3M19 10h3M19 14h3' },
+      { id: 'inmobiliaria', name: 'Inmobiliaria', ref: [15, 30, 10], icon: 'M3 11l9-7 9 7v9H3zM9 20v-6h6v6' },
+      { id: 'salud', name: 'Salud', ref: [25, 45, 40], icon: 'M12 21s-8-5-8-11a5 5 0 0 1 8-3 5 5 0 0 1 8 3c0 6-8 11-8 11zM12 9v5M9.5 11.5h5' },
+      { id: 'educacion', name: 'Educación', ref: [20, 35, 30], icon: 'M2 9l10-5 10 5-10 5zM6 11v5c3 2 9 2 12 0v-5' }
+    ];
+  }
+  pct(x) { return x.toLocaleString('es-EC', { minimumFractionDigits: 1, maximumFractionDigits: 1 }) + ' %'; }
+  play() {
+    if (this._anim) cancelAnimationFrame(this._anim);
+    const reduce = typeof window !== 'undefined' && window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    if (reduce) { this.setState({ t: 1 }); return; }
+    const start = performance.now(), dur = 1800;
+    const tick = (now) => {
+      const t = Math.min(1, (now - start) / dur);
+      this.setState({ t });
+      if (t < 1) this._anim = requestAnimationFrame(tick);
+    };
+    this.setState({ t: 0, run: (this.state && this.state.run || 0) + 1 });
+    this._anim = requestAnimationFrame(tick);
+  }
+  renderVals() {
+    const st = this.state || {};
+    const step = st.step || 1;
+    const sectors = this.sectorList();
+    const sec = sectors.find((s) => s.id === st.sector) || null;
+    const raw = { leads: st.leads ?? '500', inter: st.inter ?? '150', visitas: st.visitas ?? '45', ventas: st.ventas ?? '12' };
+    const num = (v) => { const n = parseFloat(String(v).replace(',', '.')); return isFinite(n) && n >= 0 ? n : NaN; };
+    const L = num(raw.leads), I = num(raw.inter), V = num(raw.visitas), S = num(raw.ventas);
+    let invalidMsg = '';
+    if ([L, I, V, S].some(isNaN)) invalidMsg = 'Complete los cuatro números.';
+    else if (L === 0 || I === 0 || V === 0) invalidMsg = 'Leads, interesados y visitas deben ser mayores que cero.';
+    else if (I > L || V > I || S > V) invalidMsg = 'Cada etapa debe ser igual o menor que la anterior.';
+    const valid = !invalidMsg;
+
+    const stepDefs = ['1 · Sector', '2 · Números', '3 · Resultado'];
+    const steps = stepDefs.map((label, i) => {
+      const n = i + 1, done = n < step, cur = n === step;
+      const locked = (n === 2 && !sec) || (n === 3 && (!valid || !sec || !st.revealed));
+      return {
+        label, current: cur ? 'step' : 'false', locked,
+        text: cur ? '#FFFFFF' : (done ? '#C8C3B4' : '#6E685D'),
+        bar: cur || done ? '#FF005E' : 'rgba(200,195,180,0.15)',
+        glow: cur ? '0 0 12px rgba(255,0,94,0.8)' : 'none',
+        go: () => { if (!locked) this.setState({ step: n }); }
+      };
+    });
+
+    const sectorsV = sectors.map((s) => {
+      const on = sec && s.id === sec.id;
+      return {
+        name: s.name, icon: s.icon, pressed: on ? 'true' : 'false',
+        bg: on ? 'rgba(255,0,94,0.16)' : 'rgba(200,195,180,0.03)',
+        border: on ? '#FF005E' : 'rgba(200,195,180,0.14)',
+        glow: on ? '0 0 30px rgba(255,0,94,0.35)' : 'none',
+        lift: on ? 'translateY(-3px)' : 'none',
+        pick: () => {
+          this.setState({ sector: s.id });
+          if (this._adv) clearTimeout(this._adv);
+          this._adv = setTimeout(() => { this._adv = null; this.setState({ step: 2 }); }, 380);
+        }
+      };
+    });
+
+    const maxes = { leads: 5000, inter: isNaN(L) ? 5000 : Math.max(1, L), visitas: isNaN(I) ? 5000 : Math.max(1, I), ventas: isNaN(V) ? 5000 : Math.max(1, V) };
+    const defs = [['leads', 'Leads recibidos', 10], ['inter', 'Interesados', 1], ['visitas', 'Visitas o reuniones', 1], ['ventas', 'Ventas cerradas', 1]];
+    const fields = defs.map(([key, label, stp]) => ({
+      id: 'f-' + key, label, value: raw[key], max: maxes[key], step: stp,
+      change: (e) => this.setState({ [key]: e.target.value })
+    }));
+    const fv = [L, I, V, S], fl = ['Leads', 'Interesados', 'Visitas', 'Ventas'];
+    const shades = [['#FF005E', '#FF4D8D'], ['#D6004F', '#FF2E75'], ['#AE0041', '#E0005A'], ['#8C0034', '#C2004A']];
+    const funnel = fv.map((v, i) => ({
+      w: (!isNaN(v) && L > 0 ? Math.max(18, Math.min(100, v / L * 100)) : 18).toFixed(1),
+      n: isNaN(v) ? '—' : Math.round(v).toLocaleString('es-EC'),
+      label: fl[i], c1: shades[i][0], c2: shades[i][1]
+    }));
+
+    // Resultado
+    const ref = sec ? sec.ref : [0, 0, 0];
+    const you = valid ? [I / L * 100, V / I * 100, S / V * 100] : [0, 0, 0];
+    const t = st.t ?? 1;
+    const ease = (x) => 1 - Math.pow(1 - Math.max(0, Math.min(1, x)), 3);
+    const names = ['Leads → Interesados', 'Interesados → Visitas', 'Visitas → Ventas'];
+    const tips = ['responder y calificar cada lead en minutos.', 'automatizar el seguimiento y agendar visitas sin perseguir a nadie.', 'preparar propuestas en minutos y hacer seguimiento después de cada visita.'];
+    let worst = -1, worstRel = -0.1;
+    const stages = names.map((name, i) => {
+      const rel = ref[i] ? (you[i] - ref[i]) / ref[i] : 0;
+      if (rel < worstRel) { worstRel = rel; worst = i; }
+      const p = ease((t - 0.25 - i * 0.12) / 0.5);
+      const max = Math.max(you[i], ref[i], 1) * 1.1;
+      const up = rel >= 0.1, down = rel <= -0.1;
+      return {
+        name, ref: this.pct(ref[i]),
+        youShown: this.pct(you[i] * p), youW: (you[i] / max * 100 * p).toFixed(1), refW: (ref[i] / max * 100 * Math.min(1, p * 1.4)).toFixed(1),
+        status: up ? '▲ Por encima' : down ? '▼ Por debajo' : '● En línea',
+        chipBg: up ? 'rgba(200,195,180,0.12)' : down ? 'rgba(255,0,94,0.18)' : 'rgba(200,195,180,0.08)',
+        chipText: up ? '#FFFFFF' : down ? '#FF4D8D' : '#C8C3B4',
+        bg: down ? 'rgba(255,0,94,0.06)' : 'rgba(200,195,180,0.03)',
+        border: down ? '#8C0034' : 'rgba(200,195,180,0.12)',
+        delay: (0.2 + i * 0.12).toFixed(2), rel
+      };
+    });
+    let extra = 0;
+    if (valid && worst >= 0) { const r = you.map((x) => x / 100); r[worst] = ref[worst] / 100; extra = Math.max(0, Math.round(L * r[0] * r[1] * r[2] - S)); }
+    const hasOpp = valid && worst >= 0 && extra > 0;
+    const shownExtra = Math.round(extra * ease(t / 0.8));
+    const totalYou = valid ? S / L * 100 : 0;
+    const totalRef = ref.reduce((a, r) => a * r / 100, 1) * 100;
+    const ringMax = Math.max(totalYou, totalRef, 0.1) * 1.15;
+    const pt = ease(t / 0.9);
+
+    const parts = [];
+    if (step === 3) {
+      const cols = ['#FF005E', '#FF4D8D', '#C8C3B4', '#8C0034', '#FFFFFF'];
+      for (let i = 0; i < 26; i++) {
+        const a = (i / 26) * Math.PI * 2 + (i % 3) * 0.2;
+        const dist = 120 + (i * 37) % 140;
+        const delay = (i % 6) * 0.015, dur = 0.55 + (i % 5) * 0.06;
+        const tp = Math.max(0, Math.min(1, (t - delay) / dur));
+        const e = 1 - Math.pow(1 - tp, 3);
+        const o = tp <= 0 ? 0 : tp < 0.12 ? tp / 0.12 : Math.max(0, 1 - (tp - 0.12) / 0.88);
+        const sz = 4 + (i % 4) * 2;
+        parts.push({ x: Math.round(Math.cos(a) * dist * e - sz / 2), y: Math.round(Math.sin(a) * dist * 0.7 * e - sz / 2 + 40 * tp * tp), rot: Math.round(tp * 220 * (i % 2 ? 1 : -1)), o: o.toFixed(2), s: sz, r: i % 2 ? '50%' : '2px', c: cols[i % cols.length] });
+      }
+    }
+
+    return {
+      steps, sectors: sectorsV, fields, funnel,
+      isStep1: step === 1, isStep2: step === 2, isStep3: step === 3,
+      invalid: !valid, invalidMsg,
+      revealBg: valid ? '#FF005E' : '#3D0019',
+      revealAnim: valid ? 'aiPulse 2.4s ease-in-out infinite' : 'none',
+      reveal: () => { if (!valid || !sec) return; this.setState({ step: 3, revealed: true }); this.play(); },
+      again: () => this.setState({ step: 2 }),
+      particles: parts,
+      heroLabel: hasOpp ? 'Podría cerrar cada mes' : 'Resultado de su embudo',
+      heroValue: hasOpp ? '+' + shownExtra : '¡Bien!',
+      heroSub: hasOpp ? 'ventas más con los mismos leads, mejorando la etapa ' + names[worst].toLowerCase() + '.' : 'Su embudo está en línea o por encima de su sector.',
+      totalYouTxt: this.pct(totalYou), totalRefTxt: this.pct(totalRef),
+      totalYouShown: this.pct(totalYou * pt),
+      ringYou: (490.09 * (1 - Math.min(1, totalYou / ringMax) * pt)).toFixed(2),
+      ringRef: (376.99 * (1 - Math.min(1, totalRef / ringMax) * pt)).toFixed(2),
+      stages, hasOpp, oppTip: hasOpp ? tips[worst] : ''
+    };
+  }
+}
+</script>
+<script src="js/ailab-runtime.js" defer></script>
+</body>
+</html>
