@@ -17,6 +17,6 @@ jobs:
           SFTP_USER: ${{ secrets.SFTP_USER }}
           SFTP_PASSWORD: ${{ secrets.SFTP_PASSWORD }}
         run: |
-          lftp -e "set sftp:auto-confirm yes; set net:max-retries 2; mirror -R --verbose --exclude-glob .git* --exclude-glob .github/ --exclude CLAUDE.md --exclude README.md ./ ailab/; bye" -u "$SFTP_USER","$SFTP_PASSWORD" sftp://$SFTP_HOST
+          lftp -e "set sftp:auto-confirm yes; set net:max-retries 2; mirror -R --verbose -x '^\\.git' -x '^CLAUDE\\.md$' -x '^README\\.md$' ./ ailab/; bye" -u "$SFTP_USER","$SFTP_PASSWORD" sftp://$SFTP_HOST
       - name: Comprobar
         run: curl -sf -o /dev/null -w "ailab.pra2media.com → %{http_code}\n" https://ailab.pra2media.com/
