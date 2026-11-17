@@ -11,12 +11,14 @@ jobs:
       - uses: actions/checkout@v4
       - name: Instalar lftp
         run: sudo apt-get update -qq && sudo apt-get install -y -qq lftp
+      # El mirror no borra archivos del servidor: los que se quitan del repo
+      # se borran aquí de forma explícita con rm -f.
       - name: Subir por SFTP a /ailab
         env:
           SFTP_HOST: ${{ secrets.SFTP_HOST }}
           SFTP_USER: ${{ secrets.SFTP_USER }}
           SFTP_PASSWORD: ${{ secrets.SFTP_PASSWORD }}
         run: |
-          lftp -e "set sftp:auto-confirm yes; set net:max-retries 2; mirror -R --verbose -x '^\\.git' -x '^CLAUDE\\.md$' -x '^README\\.md$' ./ ailab/; bye" -u "$SFTP_USER","$SFTP_PASSWORD" sftp://$SFTP_HOST
+          lftp -e "set sftp:auto-confirm yes; set net:max-retries 2; rm -f ailab/analisis-caso-despegar.html; mirror -R --verbose -x '^\\.git' -x '^CLAUDE\\.md$' -x '^README\\.md$' ./ ailab/; bye" -u "$SFTP_USER","$SFTP_PASSWORD" sftp://$SFTP_HOST
       - name: Comprobar
         run: curl -sf -o /dev/null -w "ailab.pra2media.com → %{http_code}\n" https://ailab.pra2media.com/
