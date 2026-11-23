@@ -69,10 +69,17 @@
 
     sending = true;
     show(MSG.sending, 'sending');
-    fetch(BREVO_URL, { method: 'POST', body: body, mode: 'cors' })
-      .then(function (r) { return r.ok ? r.json() : { success: false }; })
+    // redirect: 'manual' porque, si el formulario de Brevo tiene una página de
+    // confirmación, Brevo responde al éxito con una redirección; seguirla la
+    // bloquea el navegador (CORS) aunque la suscripción ya quedó registrada.
+    fetch(BREVO_URL, { method: 'POST', body: body, mode: 'cors', redirect: 'manual' })
+      .then(function (r) {
+        if (r.type === 'opaqueredirect') return { success: true };
+        return r.json().catch(function () { return { success: r.ok }; });
+      })
       .then(function (data) {
         if (data && data.success) { input.value = ''; show(MSG.ok, 'ok'); }
+        else if (data && data.errors && data.errors.EMAIL) { input.setAttribute('aria-invalid', 'true'); input.focus(); show(MSG.invalid, 'error'); }
         else show(MSG.error, 'error');
       })
       .catch(function () { show(MSG.error, 'error'); })
