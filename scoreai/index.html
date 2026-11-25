@@ -252,6 +252,30 @@ code{font:400 13px var(--mono);color:var(--pink);overflow-wrap:anywhere}
 @media(max-width:560px){.row3{grid-template-columns:minmax(0,1fr)}.gate.is-locked{min-height:880px}.tile small{display:none}.nav a.on{display:none}.lockup .wm{width:80px}.brand{padding:0 14px}.steps div{font-size:11px}.btn{white-space:normal;height:auto;min-height:52px;padding-top:8px;padding-bottom:8px}}
 @media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
 </style>
+<style id="glass">
+/* AI Lab · efecto glass: reemplaza los fondos magenta sólidos que tenían texto
+   negro encima (difícil de leer) por vidrio translúcido con texto claro. */
+.verdict,.why,.plan>li:first-child{
+  background:
+    linear-gradient(145deg,rgba(255,0,94,.30) 0%,rgba(255,0,94,.12) 45%,rgba(232,158,190,.10) 100%),
+    rgba(18,5,10,.55);
+  border:1px solid rgba(255,0,94,.55);
+  -webkit-backdrop-filter:blur(18px) saturate(150%);backdrop-filter:blur(18px) saturate(150%);
+  box-shadow:inset 0 1px 0 rgba(255,255,255,.14),0 30px 70px -35px rgba(255,0,94,.7);
+  color:#fff}
+.verdict .vlabel,.why .vlabel{color:#ff4d8d}
+.why.ncard ul,.plan>li:first-child p,.plan>li:first-child ul,.plan>li:first-child .plazo{color:#e9e4d6}
+.why.ncard ul b,.why b{color:#fff}
+.plan>li:first-child .step{color:#ff4d8d}
+.tile.in{
+  background:linear-gradient(145deg,rgba(255,0,94,.34),rgba(255,0,94,.14));
+  border-color:rgba(255,0,94,.75);color:#fff;
+  -webkit-backdrop-filter:blur(10px);backdrop-filter:blur(10px);
+  box-shadow:inset 0 1px 0 rgba(255,255,255,.16),0 0 18px -6px rgba(255,0,94,.8)}
+.tile.in small{color:rgba(255,255,255,.72)}
+.count{background:rgba(255,0,94,.18);border:1px solid rgba(255,0,94,.6);color:#fff;
+  -webkit-backdrop-filter:blur(8px);backdrop-filter:blur(8px)}
+</style>
 </head>
 <body>
 <div id="root"></div>
